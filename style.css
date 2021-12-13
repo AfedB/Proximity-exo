@@ -2,7 +2,9 @@
     --ff-grstand: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
-
+body {
+    overflow-x: hidden;
+}
 
 *, *::after, *::before {
     margin: 0;
