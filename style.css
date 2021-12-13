@@ -53,14 +53,17 @@
     border-radius: 20px;
     transition: all .2s ease-in-out;
     white-space: nowrap;
-
-
 }
 
 .nav a:hover {
     color: white;
     background: linear-gradient(-242.914deg, rgba(224, 78, 107, 0.205) 8.27083%, rgba(254, 173, 42, 0.288) 91.7232%);
     opacity: .9;
+}
+
+.nav a::selection {
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
 }
 
 .meteo {
