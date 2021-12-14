@@ -2,6 +2,10 @@
     --ff-grstand: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -13,18 +17,40 @@ body {
 
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #b6b6b6;
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .wrapper {
     width: 100%;
-    background-color: #242424;
+    border: #bdcbd4 solid 1px;
+
 }
 
 
 .top-container {
     width: 100%;
-    /* background-color: rgb(0, 0, 0); */
     background: linear-gradient(117.185deg, rgb(254, 171, 42) 5.27381%, rgb(224, 78, 107) 97.1786%);
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    /* align-items: center; */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -33,29 +59,28 @@ body {
 .nav {
     width: 50%;
     min-height: 140px;
-    /* background-color: rgb(0, 0, 0); */
     background: transparent;
     display: block;
     justify-content: left;
     align-items: center;
-    padding: 1rem;
-    z-index: 1000;
+    padding: .5rem;
     border-radius: 10px;
 
 }
 
 .nav a {
     color: rgb(0, 0, 0);
-    font-size: calc(2rem);
+    font-size: calc(1.5rem);
     font-family: var(--ff-grstand);
     text-decoration: none;
     margin-left: 1rem;
-    /* margin-bottom: 26rem; */
     background: linear-gradient(117.185deg, rgba(254, 173, 42, 0.466) 5.27381%, rgba(224, 78, 107, 0.24) 97.1786%);
     padding: 0px 15px;
     border-radius: 20px;
     transition: all .2s ease-in-out;
     white-space: nowrap;
+    display: flex;
+    justify-content: center;
 }
 
 .nav a:hover {
@@ -69,11 +94,7 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.meteo {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
+.meteo {}
 
 .iframe-meteo {
     /* position: absolute; */
@@ -118,30 +139,35 @@ body {
 }
 
 
-.magasin {
+#magasin {
     width: 100%;
     display: flex;
     justify-content: center;
+    transition: all 3s ease-in-out;
+    backdrop-filter: blur(6px);
 
 }
 
-.magasin img {
-    width: 100%;
-
+#magasin img {
+    /* width: 100%; */
     max-width: 100%;
     margin: auto 0;
+
 }
 
-.point-relais {
+#point-relais {
     width: 100%;
     display: flex;
     justify-content: center;
+    backdrop-filter: blur(6px);
+    transition: all 2s ease-in-out;
+
 
 }
 
-.point-relais img {
+#point-relais img {
     width: 100%;
-    max-width: 100%;
+    max-width: 1074px;
     margin: auto 0;
 
 }
@@ -157,8 +183,9 @@ body {
     overflow: hidden;
 }
 
-.iframe-guide iframe {
+.iframe-guide {
     background-color: rgb(0, 0, 0)(255, 255, 255);
+    height: 500px;
 }
 
 @keyframes run {
@@ -178,7 +205,9 @@ body {
 @media screen and (min-width: 960px) {
 
     body {
-        background-color: rgb(20, 20, 22);
+        background: url(./jeshoots-com-7VOyZ0-iO0o-unsplash.jpg);
+        background-repeat: repeat;
+
     }
 
     .wrapper {
@@ -186,18 +215,16 @@ body {
         margin: 0 auto;
     }
 
+    .top-container {
+        width: 100%;
+        height: 89px;
+        align-items: center;
+    }
+
     .nav {
         display: flex;
         width: 80%;
-        min-height: 140px;
-        /* background-color: rgb(0, 0, 0); */
-        background: transparent;
-        justify-content: left;
-        align-items: center;
-        padding: 1rem;
-        z-index: 1000;
-        position: relative;
-        border-radius: 10px;
+
     }
 
     .nav a {
