@@ -20,9 +20,9 @@
         <div id="top" class="top-container">
             <div class="nav">
                 <a href="#accueil">Accueil</a>
-                <a href="#contact">Contact</a>
                 <a href="#magasin">Magasin</a>
                 <a href="#point-relais">Point relais</a>
+                <a href="#contact">Contact</a>
 
             </div>
             <div class="meteo">
@@ -47,10 +47,7 @@
         <div id="point-relais">
             <img src="./G76uQZsp9H.jpg" alt="">
         </div>
-        <div id="contact">
-            <img src="https://www.pngfind.com/pngs/m/7-79825_page-under-construction-png-under-construction-transparent-png.png"
-                alt="">
-        </div>
+
         <div class="guide">
             <div><iframe class="iframe-guide"
                     src="//v.calameo.com/?bkcode=003564072d0e1761f1068&mode=mini&view=book&showsharemenu=false&clickto=view&clicktarget=_blank"
@@ -60,6 +57,26 @@
             </div>
         </div>
 
+        <div id="contact">
+            <form target="_blank" action="https://formsubmit.co/afedbelgacem@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="col">
+                    <input type="text" name="name" class="form-control" placeholder="Nom Prénom" required>
+                </div>
+                <div class="col">
+                    <input type="email" name="email" class="form-control" placeholder="Adresse e-mail" required>
+                </div>
+
+                <div class="form-group col">
+                    <textarea placeholder="Votre message" class="form-control" name="message" rows="10"
+                        required></textarea>
+                </div>
+                <div class="button-container"><button type="submit" class="btn btn-lg btn-dark btn-block">Submit
+                        Form</button></div>
+            </form>
+        </div>
+    </div>
     </div>
     <script src="/app.js"></script>
 </body>

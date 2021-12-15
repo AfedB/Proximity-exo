@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color: rgb(255, 255, 255);
+}
+
 body {
     overflow-x: hidden;
 }
@@ -93,10 +97,7 @@ body {
     opacity: .9;
 }
 
-.nav a::selection {
-    border-radius: 2px;
-    background-color: rgb(255, 255, 255);
-}
+
 
 .meteo {}
 
@@ -113,6 +114,8 @@ body {
     display: flex;
     /* white-space: nowrap; */
     overflow: hidden;
+    margin: auto;
+    max-width: 1320px;
 
 
 
@@ -158,6 +161,8 @@ body {
 
 }
 
+/* ------------------------------------------Point relais */
+
 #point-relais {
     width: 100%;
     display: flex;
@@ -174,20 +179,75 @@ body {
 
 }
 
+/* ------------------------------------------Point relais */
+
+/* ------------------------------------------Contact */
 #contact {
+    width: 100%;
+    max-width: 1074px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    caret-color: red;
+    background-color: #222222d6;
+
+}
+
+#contact form {
+    width: 80%;
+    margin: 2rem;
+
+}
+
+.button-container {
     width: 100%;
     display: flex;
     justify-content: center;
+}
+
+form button {
+    background-color: transparent;
+    padding: 1rem;
+    color: white;
+    font-size: calc(1.5rem);
+    font-family: var(--ff-grstand);
+    border-radius: 8px;
+
+
 
 }
 
-
-#contact img {
-    width: 1074px;
+#contact ::placeholder {
+    color: white;
+    font-family: var(--ff-grstand);
 }
+
+#contact textarea, input {
+    color: white;
+    font-size: calc(1.5rem);
+    font-family: var(--ff-grstand);
+}
+
+.col {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+
+}
+
+.col input, textarea {
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem;
+    border-radius: 8px;
+
+}
+
+/* ------------------------------------------Contact */
 
 .guide {
     max-width: 1074px;
+    width: 100%;
     overflow: hidden;
     margin: 0 auto;
 
