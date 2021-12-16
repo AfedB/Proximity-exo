@@ -58,6 +58,8 @@ body {
     background: linear-gradient(117.185deg, rgb(254, 171, 42) 5.27381%, rgb(224, 78, 107) 97.1786%);
     display: flex;
     justify-content: space-between;
+    flex-direction: row-reverse;
+
     /* align-items: center; */
     position: sticky;
     top: 0;
@@ -65,7 +67,7 @@ body {
 }
 
 .nav {
-    width: 50%;
+    /* width: 50%; */
     min-height: 140px;
     background: transparent;
     display: block;
@@ -88,7 +90,7 @@ body {
     transition: all .2s ease-in-out;
     white-space: nowrap;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 .nav a:hover {
@@ -125,8 +127,7 @@ body {
 .text-container__text {
     width: auto;
     font-family: sans-serif;
-    /* font-size: 6vh; */
-    font-size: min(6vh);
+    font-size: max(3vw, 30px);
     background-color: rgb(255, 255, 255);
     white-space: nowrap;
     animation: run 5s linear infinite;
@@ -385,7 +386,10 @@ form button {
         width: 100%;
         height: 89px;
         align-items: center;
+        flex-direction: row;
+
     }
+
 
     .nav {
         display: flex;
@@ -395,8 +399,15 @@ form button {
 
     .nav a {
         padding: 0px 13px;
-
+        text-transform: uppercase;
+        justify-content: center;
     }
+
+    /* #top a span {
+        font-family: monospace;
+        font-size: 10px;
+        color: red;
+    } */
 
     .text-container {
         width: 100%;
@@ -405,5 +416,15 @@ form button {
         display: flex;
         white-space: nowrap;
         overflow: hidden;
+    }
+
+    .text-container__text {
+        width: auto;
+        font-family: sans-serif;
+        font-size: 2.65vw;
+        background-color: rgb(255, 255, 255);
+        white-space: nowrap;
+        animation: run 5s linear infinite;
+
     }
 }
