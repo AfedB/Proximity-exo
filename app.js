@@ -1,10 +1,22 @@
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function () {
-//     var currentScrollPos = window.pageYOffset;
-//     if (prevScrollpos > currentScrollPos) {
-//         document.getElementById("top").style.height = "100px";
-//     } else {
-//         document.getElementById("top").style.height = "0";
-//     }
-//     prevScrollpos = currentScrollPos;
+// function navButton() {
+//     document.getElementById("point-relais").style.position = "relative";
+//     document.getElementById("point-relais").style.top = "89px";
+
+
 // }
+
+
+
+// document.querySelectorAll(".smooth-scroll").onClick(function (e) {
+//     let currentItem = e.target.text;
+//     console.log(currentItem);
+//     $("html, body").animate(
+//         {
+//             scrollTop:
+//                 $($(this).attr("href")).offset().top -
+//                 (currentItem == "Skills" ? 100 : 100)
+//         },
+//         "fast"
+//     );
+//     return false;
+// });
