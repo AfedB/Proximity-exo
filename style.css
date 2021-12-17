@@ -260,14 +260,28 @@ body {
 
 #cta {
     width: 50%;
-    height: 50%;
+    max-width: 350px;
+    height: 80%;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
     background-color: rgba(255, 74, 2, 0.075);
     align-items: center;
+    transition: all 1s;
+    overflow: hidden;
+
 }
+
+#cta:hover {
+    backdrop-filter: blur(2.5px);
+    -webkit-border-top-right-radius: 100px;
+    -webkit-border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+}
+
 
 #cta a {
     font-family: var(--ff-grstand);
@@ -275,9 +289,24 @@ body {
     text-decoration: none;
     color: rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.349);
-    padding: 10px 40px;
+    padding: 6px 38px;
     border-radius: 20px;
     text-transform: uppercase;
+    transition: all 1s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+
+}
+
+#cta a:hover {
+    background: linear-gradient(117.185deg, rgba(254, 173, 42, 0.685) 5.27381%, rgba(224, 78, 107, 0.76) 97.1786%);
+    -webkit-border-top-left-radius: 100px;
+    -webkit-border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+
 
 }
 
@@ -293,18 +322,24 @@ body {
 
 #point-relais {
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     transition: all 2s ease-in-out;
+    background: rgb(255, 255, 255);
+}
 
+#point-relais:hover {
+    background: rgba(255, 255, 255, 0.61);
 
 }
 
-#point-relais img {
+#horaires, #map {
     width: 100%;
-    max-width: 1440px;
-    margin: auto 0;
-
+    margin: 0 auto;
+    padding: .5rem;
 }
 
 /* ------------------------------------------Point relais */
@@ -470,7 +505,7 @@ form button {
 
     #magasin {
         width: 100%;
-        height: 1000px;
+        height: 930px;
         max-width: 1440px;
         margin: 0 auto;
         display: flex;
@@ -481,4 +516,22 @@ form button {
 
 
     }
+
+    #point-relais {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        transition: all 2s ease-in-out;
+
+
+    }
+
+    #point-relais img {
+        width: 60%;
+        max-width: 960px;
+
+    }
+
+
 }
