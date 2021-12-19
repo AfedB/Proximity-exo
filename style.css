@@ -91,13 +91,39 @@ body {
     white-space: nowrap;
     display: flex;
     justify-content: left;
+    position: relative;
+
+
+
 }
 
 .nav a:hover {
     color: white;
     background: linear-gradient(-242.914deg, rgba(224, 78, 107, 0.205) 8.27083%, rgba(254, 173, 42, 0.288) 91.7232%);
     opacity: .9;
+
 }
+
+
+
+.nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: 0%;
+    background: linear-gradient(-242.914deg, rgba(224, 78, 107, 0.205) 8.27083%, rgba(254, 173, 42, 0.288) 91.7232%);
+    height: 1px;
+    transition: width 0.25s ease-out;
+
+
+}
+
+.nav a:hover:before {
+    width: 50%;
+    right: auto;
+}
+
 
 
 
@@ -143,8 +169,29 @@ body {
     color: rgb(255, 255, 255);
     font-style: italic;
     background: linear-gradient(117.185deg, rgb(254, 171, 42) 5.27381%, rgb(224, 78, 107) 97.1786%);
+    position: relative;
+
 
 }
+
+#exo:hover::before {
+    width: 100%;
+    right: auto;
+
+}
+
+#exo:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background: linear-gradient(-242.914deg, rgb(0, 0, 0) 8.27083%, rgba(254, 173, 42, 0.288) 91.7232%);
+    height: 1px;
+    transition: width 0.25s ease-out;
+
+}
+
 
 
 #magasin {
