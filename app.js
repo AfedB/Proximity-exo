@@ -1,22 +1,19 @@
-// function navButton() {
-//     document.getElementById("point-relais").style.position = "relative";
-//     document.getElementById("point-relais").style.top = "89px";
-
-
-// }
 
 
 
-document.querySelectorAll(".smooth-scroll").onClick(function (e) {
-    let currentItem = e.target.text;
-    console.log(currentItem);
-    $("html, body").animate(
-        {
-            scrollTop:
-                $($(this).attr("href")).offset().top -
-                (currentItem == "Skills" ? 100 : 100)
-        },
-        "fast"
-    );
-    return false;
-});
+gsap.from('.text-container', { duration: 2, y: '-100%', ease: 'bounce', opacity: 0, rotation: '2' })
+
+
+
+// const button = document.querySelector('.smooth-scroll')
+// const guide = document.querySelector('.guide')
+
+// button.addEventListener('click', () => {
+//     .from('guide'{ duration: 1, y: '1000px' })
+// })
+
+gsap.to('#map', {
+    scrollTrigger: '#map',
+    duration: .5,
+    scale: 1,
+})
